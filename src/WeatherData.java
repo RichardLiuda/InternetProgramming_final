@@ -18,6 +18,25 @@ public class WeatherData {
     public double getTemperature() {
         return temperature;
     }
+    
+    // Get temperature in Celsius (always)
+    public double getTemperatureCelsius() {
+        // If temperature seems to be in Fahrenheit (high values), convert it
+        if (temperature > 50) {
+            return fahrenheitToCelsius(temperature);
+        }
+        return temperature;
+    }
+    
+    // Temperature conversion utility
+    public static double fahrenheitToCelsius(double fahrenheit) {
+        return (fahrenheit - 32) * 5.0 / 9.0;
+    }
+    
+    // Temperature conversion utility
+    public static double celsiusToFahrenheit(double celsius) {
+        return (celsius * 9.0 / 5.0) + 32;
+    }
 
     public double getHumidity() {
         return humidity;
@@ -42,13 +61,13 @@ public class WeatherData {
 
     @Override
     public String toString() {
-        String tempUnit = userPreferences.getPreferredUnits().equals("imperial") ? "°F" : "°C";
-        String windUnit = userPreferences.getPreferredUnits().equals("imperial") ? "mph" : "m/s";
-
+        // Always display in Celsius regardless of API response
+        double tempCelsius = getTemperatureCelsius();
+        
         return "Date: " + forecastDate +
-               "\nTemperature: " + temperature + tempUnit +
+               "\nTemperature: " + String.format("%.1f", tempCelsius) + "°C" +
                "\nHumidity: " + humidity + "%" +
-               "\nWind Speed: " + windSpeed + " " + windUnit +
+               "\nWind Speed: " + windSpeed + " m/s" +
                "\nDescription: " + description;
     }
 }

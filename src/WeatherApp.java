@@ -25,4 +25,8 @@ public class WeatherApp {
     public UserPreferences getUserPreferences() {
         return userPreferences;
     }
+
+    public WeatherAPIManager getApiManager() {
+        return apiManager;
+    }
 }

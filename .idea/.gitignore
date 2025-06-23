@@ -1,0 +1,22 @@
+# 默认忽略的文件
+/shelf/
+/workspace.xml
+# 基于编辑器的 HTTP 客户端请求
+/httpRequests/
+# Datasource local storage ignored files
+/dataSources/
+/dataSources.local.xml
+
+# 用户特定配置
+/tasks.xml
+/usage.statistics.xml
+/dictionaries/
+/inspectionProfiles/
+/uiDesigner.xml
+
+# 调试和性能分析
+/profilePlugins.xml
+/other.xml
+
+# 动态插件
+/dynamic.xml

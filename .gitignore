@@ -1,0 +1,93 @@
+# Java项目gitignore配置
+
+# 编译输出
+*.class
+*.jar
+*.war
+*.ear
+*.nar
+hs_err_pid*
+
+# 构建目录
+bin/
+target/
+build/
+out/
+dist/
+
+# IDE配置文件
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/usage.statistics.xml
+.idea/dictionaries
+.idea/shelf
+.idea/dataSources/
+.idea/dataSources.local.xml
+.idea/httpRequests/
+
+# VSCode
+.vscode/
+*.code-workspace
+
+# Eclipse
+.metadata
+.classpath
+.project
+.settings/
+*.tmp
+*.bak
+*.swp
+*~.nib
+
+# NetBeans
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+# 系统文件
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# 日志文件
+*.log
+*.log.*
+logs/
+
+# 临时文件
+*.tmp
+*.temp
+temp/
+tmp/
+
+# 用户配置（保留示例文件）
+# userPreferences.properties  # 如果需要忽略用户配置，取消注释
+
+# 依赖缓存
+.m2/
+.gradle/
+
+# 运行时
+*.pid
+*.seed
+*.lock
+
+# 测试覆盖率
+coverage/
+*.lcov
+
+# 备份文件
+*.orig
+*.rej
+*~
+
+# JVM崩溃日志
+hs_err_pid*
+replay_pid* 
